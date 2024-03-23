@@ -5,11 +5,12 @@ namespace Lab8.Models
     internal class TimeUpdate
 
     {
+        // полям задай явные модификаторы доступа
         int _hours;
         int _minutes;
         int _seconds;
         public int Hours
-
+ // форматирование кода. Почему пустая строка?
         {
             get { return _hours; }
             private set
@@ -20,6 +21,7 @@ namespace Lab8.Models
                     _hours = value;
             }
         }
+        // строка отступа между методами
         public int Minutes
         {
             get { return _minutes; }
