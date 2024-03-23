@@ -7,7 +7,6 @@ namespace Lab8.Models
         int _minutes;
         int _seconds;
 
-
         public int Hours
         {
             get { return _hours; }
@@ -30,6 +29,7 @@ namespace Lab8.Models
                     _minutes = value;
             }
         }
+
         public int Seconds
         {
             get { return _seconds; }

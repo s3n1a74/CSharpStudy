@@ -5,11 +5,10 @@ namespace Lab8.Models
     internal class TimeUpdate
 
     {
-        int _hours;
-        int _minutes;
-        int _seconds;
+        public int _hours;
+        public int _minutes;
+        public int _seconds;
         public int Hours
-
         {
             get { return _hours; }
             private set
@@ -31,6 +30,7 @@ namespace Lab8.Models
                     _minutes = value;
             }
         }
+
         public int Seconds
         {
             get { return _seconds; }

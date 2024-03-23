@@ -3,9 +3,9 @@ namespace Lab8.Models
 {
     internal class Time
     {
-        int _hours;
-        int _minutes;
-        int _seconds;
+        public int _hours;
+        public int _minutes;
+        public int _seconds;
 
         public Time(int hours, int minutes, int seconds)
         {
