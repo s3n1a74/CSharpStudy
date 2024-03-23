@@ -19,5 +19,9 @@ namespace Lab8.Models
             _seconds += _hours * 3600 + _minutes * 60;
             return _seconds;
         }
+
+        // Можно сделать так
+        // public int AllTimeInSeconds() => _hours * 3600 + _minutes * 60 + _seconds;
+        // Суть не меняется,
     }
 }
