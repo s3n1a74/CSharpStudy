@@ -21,6 +21,7 @@ namespace Lab11
 
         public double GetOneMinutePrice()
         {
+        // договорились ведь, что цена на минуты будет включать в себя сумма платных и бонусных минут.
             return Price / Minutes;
         }
 
