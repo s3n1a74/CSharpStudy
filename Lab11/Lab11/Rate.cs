@@ -13,15 +13,19 @@ namespace Lab11
 
         public Rate(double price, double minutes, double bonusMinutes)
         {
-            _oneMinutePrice = this.GetOneMinutePrice();
-            Price = price;
-            Minutes = minutes;
-            BonusMinutes = bonusMinutes;
+            if (price > 0 && minutes > 0 && bonusMinutes > 0)
+            {
+                _oneMinutePrice = this.GetOneMinutePrice();
+                Price = price;
+                Minutes = minutes;
+                BonusMinutes = bonusMinutes;
+            }
+            else throw new ArgumentOutOfRangeException("invalid values");
         }
 
         public double GetOneMinutePrice()
         {
-            return Price / Minutes;
+            return Price / (Minutes + BonusMinutes);
         }
 
         public override bool Equals(object obj)
