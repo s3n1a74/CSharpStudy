@@ -5,6 +5,9 @@ namespace Lab12
 {
     internal struct Triangle
     {
+        // Можно решить по-другому. В конструкторе для type ставишь дефолтным значением TriangleType = None (не триугольник)
+        // потом проверяешь, если триугольник существует, то выполняешь gettype, иначе нет. Это всё можно вызвать в конструкторе
+        
         private readonly int _a;
         private readonly int _b;
         private readonly int _c;
