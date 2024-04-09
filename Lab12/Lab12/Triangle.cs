@@ -21,8 +21,6 @@ namespace Lab12
             }
             else
             {
-                Console.WriteLine("Одна из сторон отрицательна или равна нулю. Треугольник не может быть создан.");
-                _a = _b = _c = 0;
                 type = TriangleType.NoTriangle;
             }
         }
