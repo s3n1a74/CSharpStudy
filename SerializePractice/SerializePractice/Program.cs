@@ -1,9 +1,7 @@
 ﻿using SerializePractice;
-using System.Text.Json;
-using System.Xml.Serialization;
 class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
         GasAppliance kolonka = new GasAppliance(new Manufacturer("Lvov"), ApplianceType.Geyser);
         GasAppliance plita = new GasAppliance(new Manufacturer("Gorenje"), ApplianceType.GasStove);
@@ -15,18 +13,10 @@ class Program
 
         Employee[] employees = { stary, me, student };
 
-        using (FileStream fs = new FileStream("employees.json", FileMode.OpenOrCreate))
-        {
-            await JsonSerializer.SerializeAsync(fs, employees);
-        }
-
-        XmlSerializer xmlSerializer = new XmlSerializer(typeof(Employee[]));
-
-        using (FileStream fs = new FileStream("employees.xml", FileMode.OpenOrCreate))
-        {
-            xmlSerializer.Serialize(fs, employees);
-        }
-
-        Console.WriteLine("Сериализация завершена.");
+        IObjectSerialize objectSerialize = new SerializeToJson("serialize.json", employees);
+        objectSerialize.ObjectSerialize();
+        IObjectSerialize objectSerialize1 = new SerializeToXml("serialize.xml", employees);
+        objectSerialize1.ObjectSerialize();
     }
+
 }
