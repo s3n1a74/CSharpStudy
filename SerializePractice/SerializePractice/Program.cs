@@ -5,6 +5,7 @@ class Program
 {
     public static async Task Main(string[] args)
     {
+        //todo: сериализация в xml; json должна быть в отдельном классе, с учётом ооп
         GasAppliance kolonka = new GasAppliance(new Manufacturer("Lvov"), ApplianceType.Geyser);
         GasAppliance plita = new GasAppliance(new Manufacturer("Gorenje"), ApplianceType.GasStove);
         GasAppliance kotel = new GasAppliance(new Manufacturer("APOK"), ApplianceType.GasBoiler);
